@@ -11,7 +11,7 @@ protocol NewsView: class {
     func hideIndicator()
     func fetchingDataSuccess()
     func showError(error: String)
-    func showEmptyView(message: String)
+    func showErrorView(message: String)
     func showRetryButton()
     func navigateToNewsDetailsScreen(newsFeed: NewsFeedDataModal)
 }
@@ -47,17 +47,17 @@ class NewsFeedPresenter {
             switch error {
             case .noInternetConnection:
                 self.view?.showRetryButton()
-                self.view?.showEmptyView(message: StringConstants.noInternetMessage)
+                self.view?.showErrorView(message: StringConstants.noInternetMessage)
             case .parsingError:
                 self.view?.showError(error: error.localizedDescription)
             case .unexpectedError:
                 self.view?.showError(error: error.localizedDescription)
             case .invaildURL:
-                self.view?.showEmptyView(message: StringConstants.noDataMessage)
+                self.view?.showErrorView(message: StringConstants.noDataMessage)
             case .badRequest:
-                self.view?.showEmptyView(message: error.localizedDescription)
+                self.view?.showErrorView(message: error.localizedDescription)
             case .noDataFound:
-                self.view?.showEmptyView(message: StringConstants.noDataMessage)            }
+                self.view?.showErrorView(message: StringConstants.noDataMessage)            }
         }
 
     }

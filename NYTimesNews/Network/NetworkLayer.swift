@@ -62,7 +62,6 @@ extension NetworkLayer {
             }
         }
         requestURLStr += APIParametersKey.NYTimesAPIKey.key + APIParametersValue.NYTimesAPIValue.value
-        print(requestURLStr)
         return requestURLStr
     }
     // Create POST Request
@@ -88,7 +87,6 @@ extension NetworkLayer {
             do {// try to parse the response
                 let decoder = JSONDecoder()
                 let data = try decoder.decode(withModel.self, from: data)
-                print("RESPONSE: \(data)")
                 guard let httpURLResponse =  response as? HTTPURLResponse else {
                     failure(NetworkError.badRequest)
                     return

@@ -8,7 +8,7 @@
 import Foundation
 struct NYTimesViewMostFeedsRequest: APIRequest {
     var paramters: [String: Any]?
-    var baseURL: String = NetworkConstants.NYTimesAPIBaseURL
+    var baseURL: String = APIURLConstants.NYTimesAPIBaseURL
     var method: RestMethod = .get
     var endPointName = Endpoints.mostviewedAllSections.name
     init(withParamters paramters: [String: Any]?) {

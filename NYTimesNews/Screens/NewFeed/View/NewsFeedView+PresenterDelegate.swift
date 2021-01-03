@@ -25,13 +25,12 @@ extension NewsFeedView: NewsView, Popupable, Loadable {
         newsTableView.reloadData()
     }
     func showError(error: String) {
-        print(error)
     }
-    func showEmptyView(message: String) {
+    func showErrorView(message: String) {
         newsTableView.isHidden = true
-        emptyView.isHidden = false
+        errorView.isHidden = false
         retryButton.isHidden = false
-        emptyViewLabel.text = message
+        errorLabel.text = message
     }
     func navigateToNewsDetailsScreen(newsFeed: NewsFeedDataModal) {
         let newsDetailsView = assembleNewsDetails(newsFeed: newsFeed)
@@ -39,7 +38,8 @@ extension NewsFeedView: NewsView, Popupable, Loadable {
     }
     func assembleNewsDetails(newsFeed: NewsFeedDataModal) -> NewsFeedDetailsView {
         let view: NewsFeedDetailsView = (self.storyboard?.instantiateViewController(
-            withIdentifier: "newsDetailsView") as? NewsFeedDetailsView)!
+                                            withIdentifier: ViewsIdentifiers.newsDetailsViewIdentifier)
+                                            as? NewsFeedDetailsView)!
         let presenter = NewsFeedDetailsPresenter(view: view)
 
         presenter.newsFeedInfo = newsFeed

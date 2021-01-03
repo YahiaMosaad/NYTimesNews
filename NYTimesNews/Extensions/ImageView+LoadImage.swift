@@ -22,7 +22,6 @@ extension UIImageView {
         // if not, download image from url
         URLSession.shared.dataTask(with: url!, completionHandler: { (data, _, error) in
             if error != nil {
-                print(error!)
                 return
             }
             DispatchQueue.main.async {
@@ -44,7 +43,6 @@ extension UIImageView {
         // if not, download image from url
         URLSession.shared.dataTask(with: url!, completionHandler: { (data, _, error) in
             if error != nil {
-                print(error!)
                 return
             }
             DispatchQueue.main.async {

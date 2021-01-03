@@ -6,11 +6,6 @@
 //
 
 import Foundation
-struct NetworkConstants {
-    // MARK: - mark APIRequest Constants
-    static let NYTimesAPIBaseURL = "http://api.nytimes.com/svc/mostpopular/v2/"
-}
-
 struct StringConstants {
     // MARK: - mark Srting Constants
     static let noInternetMessage = "No Internet Connection"

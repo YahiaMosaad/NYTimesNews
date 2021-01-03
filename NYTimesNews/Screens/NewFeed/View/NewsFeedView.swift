@@ -12,8 +12,8 @@ protocol NewsFeedLogic: class {
 class NewsFeedView: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var newsTableView: UITableView!
-    @IBOutlet weak var emptyView: UIView!
-    @IBOutlet weak var emptyViewLabel: UILabel!
+    @IBOutlet weak var errorView: UIView!
+    @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var retryButton: UIButton!
 
     // MARK: - Instances
@@ -26,7 +26,7 @@ class NewsFeedView: UIViewController {
         presenter = NewsFeedPresenter(view: self)
         presenter.viewController = self
         presenter.viewDidLoad()
-        emptyView.isHidden = true
+        errorView.isHidden = true
         setupTableView()
     }
     func setupTableView() {
@@ -52,7 +52,8 @@ extension NewsFeedView: NewsFeedLogic {
 
 extension NewsFeedView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsFeedCellID", for: indexPath) as? NewsFeedCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellsIdentifiers.newsFeedTableViewCellIdentifier,
+                                                 for: indexPath) as? NewsFeedCell
         presenter.configure(cell: cell!, for: indexPath.row)
         return cell!
     }
