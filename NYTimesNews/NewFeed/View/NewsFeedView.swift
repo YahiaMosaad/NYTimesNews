@@ -14,7 +14,8 @@ class NewsFeedView: UIViewController {
     @IBOutlet weak var newsTableView: UITableView!
     @IBOutlet weak var emptyView: UIView!
     @IBOutlet weak var emptyViewLabel: UILabel!
-    
+    @IBOutlet weak var retryButton: UIButton!
+
     // MARK: - Instances
     var presenter: NewsFeedPresenter!
     override func viewDidLoad() {
@@ -29,9 +30,13 @@ class NewsFeedView: UIViewController {
         setupTableView()
     }
     func setupTableView() {
+        self.retryButton.isHidden = true
         self.newsTableView.isHidden = true
         newsTableView.dataSource = self
         newsTableView.delegate = self
+    }
+    @IBAction func retryBtnTapped(sender: UIButton) {
+        setup()
     }
 }
 extension NewsFeedView: NewsFeedLogic {

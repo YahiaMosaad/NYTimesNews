@@ -17,7 +17,7 @@ struct NYTimesViewMostFeedsRequest: APIRequest {
     }
 }
 class NewsFeedInteractor: NetworkLayer {
-    func fetchNewFeed(period: NewsPeriod,section: String,
+    func fetchNewFeed(period: NewsPeriod,
                           success: (([NewsFeedDataModal]?) -> Void)?,
                           failure: ((NetworkError) -> Void)? ) {
         

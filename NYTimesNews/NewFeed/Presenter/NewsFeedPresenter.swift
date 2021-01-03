@@ -12,6 +12,7 @@ protocol NewsView: class {
     func fetchingDataSuccess()
     func showError(error: String)
     func showEmptyView(message: String)
+    func showRetryButton()
     func navigateToNewsDetailsScreen(newsFeed: NewsFeedDataModal)
 }
 protocol newsCellView {
@@ -35,7 +36,7 @@ class NewsFeedPresenter {
     }
     func getMostViewedNews() {
         view?.showIndicator()
-        interactor.fetchNewFeed(period: .week, section: "all-sections") { (news) in
+        interactor.fetchNewFeed(period: .week) { (news) in
             guard let newsFeed = news else { return }
             self.view?.hideIndicator()
             self.newsArray = newsFeed
@@ -45,6 +46,7 @@ class NewsFeedPresenter {
             self.view?.hideIndicator()
             switch error {
             case .noInternetConnection:
+                self.view?.showRetryButton()
                 self.view?.showEmptyView(message: StringConstants.noInternetMessage)
             case .parsingError:
                 self.view?.showError(error: error.localizedDescription)
@@ -55,7 +57,7 @@ class NewsFeedPresenter {
             case .badRequest:
                 self.view?.showError(error: error.localizedDescription)
             case .noDataFound:
-                self.view?.showError(error: "No data for")
+                self.view?.showError(error: StringConstants.noDataMessage)
             }
         }
 
