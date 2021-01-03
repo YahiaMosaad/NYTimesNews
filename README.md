@@ -6,6 +6,8 @@
 
 . Application using MVP architecture
 
+. The application is being developed on Xcode Version 12.3, Swift 5.3.
+
 . Uisng URLSession to handle requests and parse reponse using Codable.
 
 . Application using generics for NetworkLayer under prtocol oriented.
@@ -14,4 +16,4 @@
 
 . Add unit test and apply test cases.
 
-. The application is being developed on Xcode Version 12.3, Swift 5.3.
+
