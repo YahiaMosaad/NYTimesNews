@@ -27,8 +27,8 @@ class NewsFeedDetailsPresenter {
         }
         view?.showNewsTitle(title: newsFeedInfo!.title)
         view?.showNewsDetails(newsDetails: newsFeedInfo!.abstract)
-        if let jumboImageURL = newsFeedInfo!.jumboImageURL {
-            view?.showNewsImageFrom(imageURL: jumboImageURL)
+        if let standradImageURL = newsFeedInfo!.largeImageURL {
+            view?.showNewsImageFrom(imageURL: standradImageURL)
         }
     }
 }

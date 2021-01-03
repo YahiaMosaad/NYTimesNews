@@ -70,7 +70,7 @@ class NewsFeedPresenter {
         cell.displayDescription(desciption: newFeed.abstract)
         cell.displayDate(date: newFeed.publishedDate)
         cell.setNewsImageViewTag(index: index)
-        if let thumnailURL = newFeed.thumbnailURL {
+        if let thumnailURL = newFeed.standradThumbnailURL {
             cell.displayImage(imageURL: thumnailURL, indexForRow: index)
         } else {
         }
