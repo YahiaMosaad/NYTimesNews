@@ -69,5 +69,3 @@ extension NewsFeedView: UITableViewDelegate {
         return 190.0
     }
 }
-
-

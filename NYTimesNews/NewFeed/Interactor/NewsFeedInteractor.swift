@@ -17,10 +17,10 @@ struct NYTimesViewMostFeedsRequest: APIRequest {
 }
 class NewsFeedInteractor: NetworkLayer {
     func fetchNewFeed(period: NewsPeriod,
-                          success: (([NewsFeedDataModal]?) -> Void)?,
-                          failure: ((NetworkError) -> Void)? ) {
-        
-        let newsFeedRequest: NYTimesViewMostFeedsRequest = NYTimesViewMostFeedsRequest(withParamters: [period.rawValue + APIParametersKey.json.key: ""])
+                      success: (([NewsFeedDataModal]?) -> Void)?,
+                      failure: ((NetworkError) -> Void)? ) {
+        let newsFeedRequest: NYTimesViewMostFeedsRequest = NYTimesViewMostFeedsRequest(withParamters:
+                                    [period.rawValue + APIParametersKey.json.key: ""])
         execute(request: newsFeedRequest, withModel: NewsFeedModal.self, success: { (result) in
             success!(result.results)
         }, failure: { (error) in

@@ -6,8 +6,6 @@
 //
 
 import UIKit
-
-
 class NewsFeedDetailsView: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var newFeedImageView: UIImageView!

@@ -47,7 +47,7 @@ extension NetworkLayer {
             failure(error)
         })
     }
-    //Create GET Request
+    // Create GET Request
     private func createGetRequest(for request: APIRequest) -> String {
         var requestURLStr = ""
         requestURLStr = request.baseURL + request.endPointName
@@ -61,23 +61,22 @@ extension NetworkLayer {
                 }
             }
         }
-      
         requestURLStr += APIParametersKey.NYTimesAPIKey.key + APIParametersValue.NYTimesAPIValue.value
         print(requestURLStr)
         return requestURLStr
     }
-    //Create POST Request
+    // Create POST Request
     private func createPostRequest(for request: APIRequest) -> String {
         return " "
     }
-    //Excute UELSessionDataTak For Request
+    // Excute UELSessionDataTak For Request
     private func excuteDataTask<T: Codable>(requestURL: URL, withModel: T.Type,
                                             success: @escaping ((T) -> Void) ,
                                             failure: @escaping ((NetworkError) -> Void)) {
         URLSession.shared.dataTask(with: requestURL) { (data, response, error) in
             if let error = error as NSError?, error.domain == NSURLErrorDomain &&
                 error.code == NSURLErrorNotConnectedToInternet {
-                DispatchQueue.main.async {//call main thread to handle response
+                DispatchQueue.main.async {// call main thread to handle response
                     failure(NetworkError.noInternetConnection)
                 }
                 return
@@ -86,7 +85,7 @@ extension NetworkLayer {
                 failure(NetworkError.unexpectedError)
                 return
             }
-            do {//try to parse the response
+            do {// try to parse the response
                 let decoder = JSONDecoder()
                 let data = try decoder.decode(withModel.self, from: data)
                 print("RESPONSE: \(data)")
@@ -95,15 +94,15 @@ extension NetworkLayer {
                     return
                 }
                 if httpURLResponse.statusCode == 200 {
-                    DispatchQueue.main.async {//call main thread to handle response
+                    DispatchQueue.main.async {// call main thread to handle response
                         success(data)
                     }
                 } else {
-                    DispatchQueue.main.async {//call main thread to handle response
+                    DispatchQueue.main.async {// call main thread to handle response
                         failure(NetworkError.noDataFound)
                     }
                 }
-            } catch _ {//This is where we catch the parsing error
+            } catch _ {// This is where we catch the parsing error
                 DispatchQueue.main.async {
                     failure(NetworkError.parsingError)
                 }

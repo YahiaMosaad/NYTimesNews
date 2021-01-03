@@ -38,5 +38,4 @@ class NewsFeedCell: UITableViewCell, newsCellView {
     func displayImage(imageURL: String, indexForRow: Int) {
         newFeedImageView.loadImageFromCache(withUrl: imageURL, cellIndexPathRow: indexForRow)
     }
-    
 }

@@ -47,7 +47,6 @@ enum APIParametersKey {
 }
 enum APIParametersValue {
     case NYTimesAPIValue
-  
     var value: String {
         switch self {
         case .NYTimesAPIValue:

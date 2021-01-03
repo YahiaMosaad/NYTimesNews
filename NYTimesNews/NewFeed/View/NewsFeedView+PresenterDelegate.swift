@@ -11,7 +11,6 @@ extension NewsFeedView: NewsView, Popupable, Loadable {
     func showRetryButton() {
         retryButton.isHidden = false
     }
-    
     func showIndicator() {
         newsTableView.isHidden = true
         showLoadingIndicator()
