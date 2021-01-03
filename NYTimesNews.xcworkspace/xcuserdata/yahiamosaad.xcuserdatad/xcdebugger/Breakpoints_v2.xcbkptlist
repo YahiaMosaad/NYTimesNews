@@ -20,53 +20,5 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "750FBFCE-6CFB-4331-A6D4-9D3D42C4441B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NYTimesNews/NewFeed/Presenter/NewsFeedPresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "getMostViewedNews()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "750FBFCE-6CFB-4331-A6D4-9D3D42C4441B - 42045bf9a894d2dc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "NYTimesNews.NewsFeedPresenter.getMostViewedNews() -&gt; ()"
-                  moduleName = "NYTimesNews"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yahiamosaad/Desktop/Yahia/GitHub/NYTimesNews/NYTimesNews/NewFeed/Presenter/NewsFeedPresenter.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "265">
-               </Location>
-               <Location
-                  uuid = "750FBFCE-6CFB-4331-A6D4-9D3D42C4441B - bb544804477d9ef6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;NYTimesNews.NewsFeedDataModal&gt;&gt;) -&gt; () in NYTimesNews.NewsFeedPresenter.getMostViewedNews() -&gt; ()"
-                  moduleName = "NYTimesNews"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yahiamosaad/Desktop/Yahia/GitHub/NYTimesNews/NYTimesNews/NewFeed/Presenter/NewsFeedPresenter.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "106">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

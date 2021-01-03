@@ -55,10 +55,9 @@ class NewsFeedPresenter {
             case .invaildURL:
                 self.view?.showEmptyView(message: StringConstants.noDataMessage)
             case .badRequest:
-                self.view?.showError(error: error.localizedDescription)
+                self.view?.showEmptyView(message: error.localizedDescription)
             case .noDataFound:
-                self.view?.showError(error: StringConstants.noDataMessage)
-            }
+                self.view?.showEmptyView(message: StringConstants.noDataMessage)            }
         }
 
     }

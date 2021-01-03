@@ -11,7 +11,6 @@ struct NYTimesViewMostFeedsRequest: APIRequest {
     var baseURL: String = NetworkConstants.NYTimesAPIBaseURL
     var method: RestMethod = .get
     var endPointName = Endpoints.mostviewedAllSections.name
-    var section: NewsPeriod = .week
     init(withParamters paramters: [String: Any]?) {
         self.paramters = paramters
     }

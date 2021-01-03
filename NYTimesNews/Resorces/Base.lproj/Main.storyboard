@@ -29,7 +29,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pgx-Cq-8nQ">
-                                        <rect key="frame" x="185" y="497" width="44" height="32"/>
+                                        <rect key="frame" x="185" y="489" width="44" height="32"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Retry">
@@ -54,11 +54,11 @@
                                     <constraint firstItem="xQO-KB-o7x" firstAttribute="centerY" secondItem="N90-tR-DY0" secondAttribute="centerY" id="37v-FX-MxI"/>
                                     <constraint firstItem="xQO-KB-o7x" firstAttribute="centerX" secondItem="N90-tR-DY0" secondAttribute="centerX" id="gJb-fU-GqD"/>
                                     <constraint firstItem="pgx-Cq-8nQ" firstAttribute="centerX" secondItem="N90-tR-DY0" secondAttribute="centerX" id="qCK-T6-235"/>
-                                    <constraint firstItem="pgx-Cq-8nQ" firstAttribute="top" secondItem="xQO-KB-o7x" secondAttribute="bottom" constant="8" id="xrF-9B-GX2"/>
+                                    <constraint firstItem="pgx-Cq-8nQ" firstAttribute="top" secondItem="xQO-KB-o7x" secondAttribute="bottom" id="xrF-9B-GX2"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x5T-Bc-584">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="NewsFeedCellID" rowHeight="190" id="uIO-4V-0pf" customClass="NewsFeedCell" customModule="NYTimesNews" customModuleProvider="target">
@@ -147,7 +147,7 @@
                             <constraint firstItem="N90-tR-DY0" firstAttribute="width" secondItem="pEx-en-oRx" secondAttribute="width" id="heU-9k-NAH"/>
                             <constraint firstItem="N90-tR-DY0" firstAttribute="centerX" secondItem="YBi-Zu-cnf" secondAttribute="centerX" id="jUq-8g-lzT"/>
                             <constraint firstAttribute="trailing" secondItem="x5T-Bc-584" secondAttribute="trailing" id="k5G-O4-RQe"/>
-                            <constraint firstItem="YBi-Zu-cnf" firstAttribute="bottom" secondItem="x5T-Bc-584" secondAttribute="bottom" id="lLF-nF-flC"/>
+                            <constraint firstAttribute="bottom" secondItem="x5T-Bc-584" secondAttribute="bottom" id="lLF-nF-flC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="NY Times News Feed" id="252-l0-ui0">
@@ -186,7 +186,7 @@
             </objects>
             <point key="canvasLocation" x="2" y="90"/>
         </scene>
-        <!--News Feed Details View-->
+        <!--NY Times-->
         <scene sceneID="gs7-wP-Cx3">
             <objects>
                 <viewController storyboardIdentifier="newsDetailsView" id="aMv-Vg-eqz" customClass="NewsFeedDetailsView" customModule="NYTimesNews" customModuleProvider="target" sceneMemberID="viewController">
@@ -198,20 +198,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pak-3M-dnR">
-                                <rect key="frame" x="20" y="385" width="374" height="61"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="61" id="azV-Qg-52e"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="yEJ-e9-tcC">
+                                <rect key="frame" x="0.0" y="88" width="414" height="269"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pak-3M-dnR">
+                                <rect key="frame" x="20" y="385" width="374" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yEJ-e9-tcC">
-                                <rect key="frame" x="0.0" y="88" width="414" height="269"/>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4EU-2A-inD">
-                                <rect key="frame" x="20" y="454" width="374" height="408"/>
+                                <rect key="frame" x="20" y="393" width="374" height="469"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -223,17 +220,17 @@
                             <constraint firstItem="4EU-2A-inD" firstAttribute="leading" secondItem="Pak-3M-dnR" secondAttribute="leading" id="ILP-AA-0Lm"/>
                             <constraint firstItem="4EU-2A-inD" firstAttribute="top" secondItem="Pak-3M-dnR" secondAttribute="bottom" constant="8" id="IbT-2k-jlS"/>
                             <constraint firstItem="yEJ-e9-tcC" firstAttribute="leading" secondItem="fpv-z3-Nek" secondAttribute="leading" id="RFr-1l-QBP"/>
+                            <constraint firstItem="Pak-3M-dnR" firstAttribute="top" secondItem="yEJ-e9-tcC" secondAttribute="bottom" constant="28" id="SIN-eL-zA6"/>
                             <constraint firstItem="4EU-2A-inD" firstAttribute="trailing" secondItem="Pak-3M-dnR" secondAttribute="trailing" id="Vja-Pp-R5z"/>
                             <constraint firstItem="yEJ-e9-tcC" firstAttribute="height" secondItem="fpv-z3-Nek" secondAttribute="height" multiplier="0.3" id="WvE-uX-7Xj"/>
                             <constraint firstItem="yEJ-e9-tcC" firstAttribute="top" secondItem="hjz-N4-NXb" secondAttribute="top" id="Ye8-5n-EE0"/>
                             <constraint firstItem="Pak-3M-dnR" firstAttribute="leading" secondItem="fpv-z3-Nek" secondAttribute="leadingMargin" id="ajv-ze-uOI"/>
                             <constraint firstItem="hjz-N4-NXb" firstAttribute="bottom" secondItem="4EU-2A-inD" secondAttribute="bottom" id="iYh-Qs-UNu"/>
                             <constraint firstItem="Pak-3M-dnR" firstAttribute="trailing" secondItem="fpv-z3-Nek" secondAttribute="trailingMargin" id="pii-x1-Iba"/>
-                            <constraint firstItem="Pak-3M-dnR" firstAttribute="top" secondItem="yEJ-e9-tcC" secondAttribute="bottom" constant="28" id="sAQ-6J-odl"/>
                             <constraint firstAttribute="trailing" secondItem="yEJ-e9-tcC" secondAttribute="trailing" id="xSo-7L-JJ7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="u5B-2Q-Z4A"/>
+                    <navigationItem key="navigationItem" title="NY Times" id="u5B-2Q-Z4A"/>
                     <connections>
                         <outlet property="newFeedDetailsTextView" destination="4EU-2A-inD" id="V7s-zu-lwy"/>
                         <outlet property="newFeedImageView" destination="yEJ-e9-tcC" id="QjB-LF-occ"/>

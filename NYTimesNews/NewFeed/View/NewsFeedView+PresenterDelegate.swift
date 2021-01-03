@@ -31,6 +31,7 @@ extension NewsFeedView: NewsView, Popupable, Loadable {
     func showEmptyView(message: String) {
         newsTableView.isHidden = true
         emptyView.isHidden = false
+        retryButton.isHidden = false
         emptyViewLabel.text = message
     }
     func navigateToNewsDetailsScreen(newsFeed: NewsFeedDataModal) {
