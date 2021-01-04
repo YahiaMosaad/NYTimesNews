@@ -2,8 +2,6 @@
 
 . Application to fetch NYTimes news from NYTimes public APIs.
 
-. Open "https://developer.nytimes.com/" then create account so you will get your "api-key".
-
 . Application using MVP architecture
 
 . The application is being developed on Xcode Version 12.3, Swift 5.3.
@@ -16,4 +14,5 @@
 
 . Add unit test and apply test cases.
 
+. Open "https://developer.nytimes.com/" then create account so you will get your "api-key".
 
